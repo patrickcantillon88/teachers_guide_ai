@@ -52,63 +52,19 @@ export default function Contents() {
 
 				{/* Sections Grid */}
 				<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
-					{/* Insert Get Started button before Teacher-Focused tile */}
-					<div className="col-span-2 sm:col-span-3 md:col-span-4 flex justify-center mb-4">
-						<button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-all duration-200">
-							Get Started &rarr;
-						</button>
-					</div>
-					{sections.map((section, idx) => (
-						<React.Fragment key={section.id}>
-							{/* Render first tile */}
-							{idx === 0 && (
-								<Link href={`/section/${section.id}`}>
-									<Card className="border-slate-200 bg-white hover:shadow-md transition-all duration-200 cursor-pointer h-full aspect-square flex flex-col p-3">
-										<div className="flex flex-col h-full justify-center items-center gap-2">
-											<div className="text-[clamp(2rem,6vw,3.5rem)] font-bold text-slate-400 leading-none">
-												{section.id}
-											</div>
-											<CardTitle className="text-[clamp(0.75rem,2.5vw,1rem)] font-medium text-slate-800 text-center leading-tight">
-												{section.title}
-											</CardTitle>
-										</div>
-									</Card>
-								</Link>
-							)}
-							{/* Render Get Started button above Teacher-Focused (second) tile */}
-							{idx === 1 && (
-								<>
-									{/* Already rendered above the grid */}
-									<Link href={`/section/${section.id}`}>
-										<Card className="border-slate-200 bg-white hover:shadow-md transition-all duration-200 cursor-pointer h-full aspect-square flex flex-col p-3">
-											<div className="flex flex-col h-full justify-center items-center gap-2">
-												<div className="text-[clamp(2rem,6vw,3.5rem)] font-bold text-slate-400 leading-none">
-													{section.id}
-												</div>
-												<CardTitle className="text-[clamp(0.75rem,2.5vw,1rem)] font-medium text-slate-800 text-center leading-tight">
-													{section.title}
-												</CardTitle>
-											</div>
-										</Card>
-									</Link>
-								</>
-							)}
-							{/* Render remaining tiles */}
-							{idx > 1 && (
-								<Link href={`/section/${section.id}`}>
-									<Card className="border-slate-200 bg-white hover:shadow-md transition-all duration-200 cursor-pointer h-full aspect-square flex flex-col p-3">
-										<div className="flex flex-col h-full justify-center items-center gap-2">
-											<div className="text-[clamp(2rem,6vw,3.5rem)] font-bold text-slate-400 leading-none">
-												{section.id}
-											</div>
-											<CardTitle className="text-[clamp(0.75rem,2.5vw,1rem)] font-medium text-slate-800 text-center leading-tight">
-												{section.title}
-											</CardTitle>
-										</div>
-									</Card>
-								</Link>
-							)}
-						</React.Fragment>
+					{sections.map((section) => (
+						<Link key={section.id} href={`/section/${section.id}`}>
+							<Card className="border-slate-200 bg-white hover:shadow-md transition-all duration-200 cursor-pointer h-full aspect-square flex flex-col p-3">
+								<div className="flex flex-col h-full justify-center items-center gap-2">
+									<div className="text-[clamp(2rem,6vw,3.5rem)] font-bold text-slate-400 leading-none">
+										{section.id}
+									</div>
+									<CardTitle className="text-[clamp(0.75rem,2.5vw,1rem)] font-medium text-slate-800 text-center leading-tight">
+										{section.title}
+									</CardTitle>
+								</div>
+							</Card>
+						</Link>
 					))}
 				</div>
 
