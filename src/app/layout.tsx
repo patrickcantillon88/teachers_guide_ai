@@ -15,13 +15,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Guide to AI",
-  description: "Modern Next.js.",
-  keywords: [ "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "PC88" }],
+  description:
+    "Modern Next.js scaffold optimized for AI-powered development. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
+  keywords: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
+  authors: [{ name: "AI Team" }],
   openGraph: {
     title: "Guide to AI",
-    description: "Guide to teaching",
-    url: "https://chat.z.ai",
+    description: "AI-powered development with modern React stack",
+    url: "https://your-ai-guide-url.com",
     siteName: "Guide to AI",
     type: "website",
   },
